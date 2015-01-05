@@ -10,7 +10,7 @@ namespace TempForCats2.Views
 
             public RecentDateItemModel()
         {
-            text = "Alex";
+            text = "TextTextText";
             URL = "Comment Comment";
             Date = DateTime.Now;
         }

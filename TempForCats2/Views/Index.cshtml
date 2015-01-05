@@ -30,40 +30,26 @@
         <div>
             <h2>  Resent Posts: </h2>
                     <ul class="post-warp">
+
+                        @foreach (var item in Model.RecentPosts.Items) {
                         <li>
-                            <p class="date">18:46 04.01.2015</p>
-                            <p class="post"> <a href="#"> Post Title Post Title Post Title Post Title Post Title Post Title Post Title  </a> </p>
+                            <p class="date">@item.Date.ToString("D")</p>
+                            <p class="post"> <a href="@item.URL"> @item.text </a> </p>
                         </li>
-                        <li>
-                            <p class="date">18:46 04.01.2015</p>
-                            <p class="post"> <a href="#"> Post Title Post Title Post Title Post Title Post Title Post Title Post Title</a> </p>
-                        </li>
-                        <li>
-                            <p class="date">18:46 04.01.2015</p>
-                            <p class="post"> <a href="#"> Post Title Post Title Post Title Post Title Post Title Post Title Post Title</a> </p>
-                        </li>
-                        <li>
-                            <p class="date">18:46 04.01.2015</p>
-                            <p class="post"> <a href="#"> Post Title Post Title Post Title Post Title Post Title Post Title Post Title</a> </p>
-                        </li>
-                    </ul>
+                        }
+                   </ul>
         </div>
 
         <div>
             <h2>Resent Comments: </h2>
                     <ul class="post-warp">
-                        <li>
-                            <p class="date">18:46 04.01.2015</p>
-                            <p class="comment"> <a href="#"> Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments </a> </p>
-                        </li>
-                        <li>
-                            <p class="date">18:46 04.01.2015</p>
-                            <p class="comment"> <a href="#"> Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments </a> </p>
-                        </li>
-                        <li>
-                            <p class="date">18:46 04.01.2015</p>
-                            <p class="comment"> <a href="#"> Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments </a> </p>
-                        </li>
+                        @foreach (var item in Model.RecentComment.Items)
+                        {
+                            <li>
+                                <p class="date">@item.Date.ToString("D") @item.Date.ToString("hh:mm")</p>
+                                <p class="comment"> <a href="@item.URL"> @item.text</a> </p>
+                                </li>
+                        }
                     </ul>
         </div>
     </div>

@@ -1,11 +1,10 @@
 ﻿
 @model TempForCats2.Views.HomeModel
 <div class="article">
-    <h3> New Text Title </h3>
-    <p class="date"> <span> 04.01.2015 </span> <span> 18:46 </span> </p>
+    <h3> @Model.Article.Title </h3>
+    <p class="date"> <span>@Model.Article.Date.ToString("D") </span> <span> @Model.Article.Date.ToString("hh:mm") </span> </p>
 
-
-    <div class="textfield" color="white">
+    <div class="textfield">
              <p> @Model.Article.Body </p>
 
      </div>
