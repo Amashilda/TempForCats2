@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TempForCats2.Views;
 
 namespace TempForCats2.Controllers
 {
@@ -11,13 +12,15 @@ namespace TempForCats2.Controllers
 
         public RedirectToRouteResult Index()
         {
-            return ReturnToAction("MainPost");
+            return RedirectToAction("MainPost");
         }
 
 
         public ActionResult MainPost()
         {
-            return View();
+
+            var model = new HomeModel();
+            return View(model);
         }
 
         public ActionResult AllPosts()

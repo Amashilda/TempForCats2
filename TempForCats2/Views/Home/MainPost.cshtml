@@ -1,0 +1,66 @@
+﻿
+@model TempForCats2.Views.HomeModel
+<div class="article">
+    <h3> New Text Title </h3>
+    <p class="date"> <span> 04.01.2015 </span> <span> 18:46 </span> </p>
+
+
+    <div class="textfield" color="white">
+             <p> @Model.Article.Body </p>
+
+     </div>
+</div>
+
+<div class="other posts">
+    <p align="center">
+        @Html.ActionLink("Click here to see all postst", "AllPosts")
+
+   <!--  <a href="#"> Click here to see all posts </a> -->
+    </p>
+</div>
+
+
+<div class="fullcomments">
+    <h2>Comments: </h2>
+
+            <ul>
+                <li>
+                    <div class="avatar"> <img src="~/Content/cat2.jpg" alt="Avatar"> </div>
+                    <div class="textcomment">
+                        <p> Name </p>
+                        <p class="date"> 21:14 04.01.2015</p>
+                        <p> Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments </p>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="avatar">
+                        <img src="~/Content/cat2.jpg" alt="Avatar">
+                    </div>
+                    <div class="textcomment">
+                        <p> Name </p>
+                        <p class="date">21:14 04.01.2015 </p>
+                        <p> Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments </p>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="avatar"> <img src="~/Content/cat2.jpg" alt="Avatar"> </div>
+                    <div class="textcomment">
+                        <p> Name </p>
+                        <p class="date"> 21:14 04.01.2015 </p>
+                        <p> Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments </p>
+
+                    </div>
+                </li>
+
+            </ul>
+</div>
+
+
+<div class="yourcom">
+    <input type="text" value="Your comment:">/>
+    <button> Submit </button>
+    <button> Cansel </button>
+</div>
