@@ -1,0 +1,155 @@
+body {
+background-color: black;}
+
+#left {
+width: 30%;
+height: absolute;
+position: absolute;
+background-color: black;
+
+#left img {
+padding: 2% 2% 2% 2%;
+}
+
+}
+#right {
+background-color: black;
+width: 70%;
+margin-left:30%;
+position: relative;
+}
+
+h2 {
+color: white;
+text-align:center;
+font-size: large;
+font-weight: bold;
+font-size: 160%;
+}
+
+h3 {
+color: white;
+font-style: italic;
+text-align:center;
+font-size: large;
+font-weight: bold;
+font-size: 210%;
+}
+
+span {
+color: white;
+font-weight: bold;
+font-size: 140%;
+}
+
+li {
+list-style-type: none;
+padding-bottom:5px;
+}
+
+
+li:hover {
+background-color: gray;
+}
+
+.search {
+clear:both; 
+text-align:center; 
+line-height:0px;
+
+}
+
+button {
+
+    width:20%;
+	text-align:center; 
+}
+
+
+
+.date {
+color: white;
+font-weight: normal;
+font-size: 60%;
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+}
+
+.post {
+color: white;
+font-weight: normal;
+font-size: 90%;
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+}
+
+.comment {
+color: white;
+font-weight: normal;
+font-size: 70%;
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+}
+
+p {
+color: white;
+}
+
+#right .article {
+font-size: 120%;
+margin-top:0%;
+margin-left: 5%;
+margin-right: 3%;
+}
+
+
+.fullcomments h2 {
+margin-left: 5%;
+margin-right: 3%;
+text-align:left;
+}
+
+.fullcomments {
+font-size: 100%;
+margin-left: 5%;
+margin-right: 3%;
+background-color: gray;
+}
+
+.fullcomments  p{
+font-size: 70%;
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+}
+
+.fullcomments li {
+margin-bottom: 10px;
+}
+
+.fullcomments li .avatar  img{
+float:left; 
+padding-right:10px;
+}
+
+.fullcomments li .textcomment  {
+overflow: hidden;
+font-weight: normal;
+position: relative;
+}
+
+#right img {
+width: 10%;
+}
+
+.yourcom input {
+margin-left: 15%;
+width: 70%;
+height: 25%;
+padding-bottom: 5%;
+margin-bottom: 3%;
+}
+.yourcom button {
+   text-align: center;
+	margin-left:40%;
+}
+
