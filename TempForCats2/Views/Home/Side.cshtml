@@ -7,8 +7,10 @@
     <ul>
         <li> @Html.ActionLink("All Posts", "AllPosts")</li>
         <!--<li><a href="#"><span> All Posts</span></a></li>-->
-        <li><a href="#"><span> About Cat</span></a></li>
-        <li><a href="#"><span> Contact Us</span></a></li>
+        <li> @Html.ActionLink("About Cat", "AboutCat")</li>
+        <!--<li><a href="#"><span> About Cat</span></a></li>-->
+        <li> @Html.ActionLink("Contact Us", "Contacts")</li>
+       <!--<li><a href="#"><span> Contact Us</span></a></li>--> 
     </ul>
 </div>
 
@@ -39,7 +41,7 @@
         @foreach (var item in Model.RecentComment.Items)
         {
             <li>
-                <p class="date">@item.Date.ToString("D") @item.Date.ToString("hh:mm")</p>
+                <p class="date">@item.Date.ToString("D")   @item.Date.ToString("hh:mm")</p>
                 <p class="comment"> <a href="@item.URL"> @item.text</a> </p>
             </li>
         }

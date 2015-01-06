@@ -9,8 +9,8 @@ namespace TempForCats2.Models
     {
         public CommentItemModel()
         {
-            Username = "Alex";
-            Body = "Comment Comment";
+            Username = "Barsik";
+            Body = "Comment Comment Comment";
             Date = DateTime.Now;
         }
 

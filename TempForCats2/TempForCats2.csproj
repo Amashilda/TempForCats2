@@ -145,6 +145,7 @@
   <ItemGroup>
     <Content Include="Content\cat.jpg" />
     <Content Include="Content\cat2.jpg" />
+    <Content Include="Content\cat4.jpg" />
     <Content Include="Content\reset.css" />
     <Content Include="Content\style.css" />
     <Content Include="Global.asax" />
@@ -189,6 +190,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\AboutCat.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Contacts.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

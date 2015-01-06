@@ -1,5 +1,6 @@
 ﻿
 @model TempForCats2.Models.HomeModel
+
     <div class="article">
         <h3> @Model.Article.Title </h3>
         <p class="date"> <span>@Model.Article.Date.ToString("D") </span> <span> @Model.Article.Date.ToString("hh:mm") </span> </p>
@@ -13,53 +14,34 @@
     <div class="other posts">
         <p align="center">
             @Html.ActionLink("Click here to see all postst", "AllPosts")
-
             <!--  <a href="#"> Click here to see all posts </a> -->
         </p>
     </div>
-
 
     <div class="fullcomments">
         <h2>Comments: </h2>
 
         <ul>
+            @foreach (var item in Model.Article.Comments) { 
             <li>
                 <div class="avatar"> <img src="~/Content/cat2.jpg" alt="Avatar"> </div>
                 <div class="textcomment">
-                    <p> Name </p>
-                    <p class="date"> 21:14 04.01.2015</p>
-                    <p> Comments Comments Comments Comments Comments </p>
+                    <p> @item.Username </p>
+                    <p class="date"> @item.Date.ToString("D") @item.Date.ToString("hh:mm")</p>
+                    <p> @item.Body </p>
 
                 </div>
             </li>
-
-            <li>
-                <div class="avatar">
-                    <img src="~/Content/cat2.jpg" alt="Avatar">
-                </div>
-                <div class="textcomment">
-                    <p> Name </p>
-                    <p class="date">21:14 04.01.2015 </p>
-                    <p> Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments </p>
-
-                </div>
-            </li>
-            <li>
-                <div class="avatar"> <img src="~/Content/cat2.jpg" alt="Avatar"> </div>
-                <div class="textcomment">
-                    <p> Name </p>
-                    <p class="date"> 21:14 04.01.2015 </p>
-                    <p> Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments </p>
-
-                </div>
-            </li>
-
+            } 
         </ul>
     </div>
 
+<div class="forname">
+    <input type="text" value="Your name:">
+</div>
 
-    <div class="yourcom">
-        <input type="text" value="Your comment:">/>
-        <button> Submit </button>
-        <button> Cansel </button>
-    </div>
+<div class="yourcom">
+    <input type="text" value="Your comment:">
+    <button> Submit </button>
+    <button> Cansel </button>
+</div>

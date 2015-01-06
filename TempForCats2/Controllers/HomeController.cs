@@ -27,7 +27,11 @@ namespace TempForCats2.Controllers
             return View(model);
         }
 
-        public ActionResult AboutCats()
+        public ActionResult AboutCat()
+        {
+            return View();
+        }
+        public ActionResult Contacts()
         {
             return View();
         }
