@@ -1,0 +1,48 @@
+﻿@model TempForCats2.Models.RecentModel
+
+<img src="~/Content/cat.jpg" width="100%" alt="The Cat">
+<h2> Test Template Blog For Cat </h2>
+
+<div id="menu">
+    <ul>
+        <li> @Html.ActionLink("All Posts", "AllPosts")</li>
+        <!--<li><a href="#"><span> All Posts</span></a></li>-->
+        <li><a href="#"><span> About Cat</span></a></li>
+        <li><a href="#"><span> Contact Us</span></a></li>
+    </ul>
+</div>
+
+<div class="search">
+    <input type="text" value="Search:">
+    <button> Go </button>
+</div>
+
+<div>
+    <h2>  Resent Posts: </h2>
+    <ul class="post-warp">
+
+        @foreach (var item in Model.RecentPosts.Items)
+        {
+            <li>
+                <p class="date">@item.Date.ToString("D")</p>
+                <p class="post"> <a href="@item.URL"> @item.text </a> </p>
+            </li>
+        }
+
+    </ul>
+</div>
+
+<div>
+    <h2>Resent Comments: </h2>
+    <ul class="post-warp">
+
+        @foreach (var item in Model.RecentComment.Items)
+        {
+            <li>
+                <p class="date">@item.Date.ToString("D") @item.Date.ToString("hh:mm")</p>
+                <p class="comment"> <a href="@item.URL"> @item.text</a> </p>
+            </li>
+        }
+
+    </ul>
+</div>

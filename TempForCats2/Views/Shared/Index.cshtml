@@ -1,0 +1,21 @@
+﻿@{
+    Layout = null;
+}
+@model TempForCats2.Models.HomeModel
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/reset.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <title>TempForCats2</title>
+</head>
+<body>
+    <div id="left">
+        @Html.Partial("Side", new TempForCats2.Models.RecentModel())
+    </div>
+
+    <div id="right">
+        @RenderBody()
+    </div>
+
+</body>
+</html>

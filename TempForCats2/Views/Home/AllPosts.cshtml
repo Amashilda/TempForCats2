@@ -1,24 +1,20 @@
-﻿@Html.ActionLink("Link to MainPost", "MainPost")
-
-<h2> All kind of posts </h2>
-
-        <ul class="post-warp">
-            <li>
-                <p class="date">18:46 04.01.2015</p>
-                <p class="post"> <a href="#"> Post Title Post Title Post Title Post Title Post Title Post Title Post Title  </a> </p>
-            </li>
-            <li>
-                <p class="date">18:46 04.01.2015</p>
-                <p class="post"> <a href="#"> Post Title Post Title Post Title Post Title Post Title Post Title Post Title</a> </p>
-            </li>
-            <li>
-                <p class="date">18:46 04.01.2015</p>
-                <p class="post"> <a href="#"> Post Title Post Title Post Title Post Title Post Title Post Title Post Title</a> </p>
-            </li>
-            <li>
-                <p class="date">18:46 04.01.2015</p>
-                <p class="post"> <a href="#"> Post Title Post Title Post Title Post Title Post Title Post Title Post Title</a> </p>
-            </li>
-        </ul>
+﻿@model TempForCats2.Models.HomeModel
 
 
+    <h2> All kind of posts </h2>
+
+    <ul class="post-warp">
+
+        @foreach (var item in Model.RecentPosts.Items)
+        {
+            <li>
+                <p class="date">@item.Date.ToString("D")</p>
+                <p class="post"> <a href="@item.URL"> @item.text </a> </p>
+            </li>
+        }
+
+    </ul>
+
+    <p align="center">
+        @Html.ActionLink("Link to MainPost", "MainPost")
+        </p>

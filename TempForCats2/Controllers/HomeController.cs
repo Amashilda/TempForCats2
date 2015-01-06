@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using TempForCats2.Views;
+using TempForCats2.Models;
 
 namespace TempForCats2.Controllers
 {
@@ -18,14 +18,25 @@ namespace TempForCats2.Controllers
 
         public ActionResult MainPost()
         {
-
             var model = new HomeModel();
             return View(model);
         }
 
-        public ActionResult AllPosts()
+        public ActionResult AllPosts(HomeModel model)
+        {
+            return View(model);
+        }
+
+        public ActionResult AboutCats()
         {
             return View();
+        }
+
+
+        public ActionResult Side()
+        {
+            var model = new RecentModel();
+            return View(model);
         }
 
 

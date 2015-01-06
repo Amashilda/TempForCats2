@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@model TempForCats2.Models.LoginModel
+<h2>        Sign-In</h2>
+<form id="form1" method="post" action="@Url.Action("Index", "Logins")">
+
+
+        @Html.TextBoxFor(m => m.Login, new { placeholder = "Login:", @class = "textbox", id = "inputtext1" })
+        @Html.TextBoxFor(m => m.Password, new { placeholder = "Password:", @class = "textbox", id = "inputtext2" })
+
+        <input id="inputsubmit1" type="submit" name="inputsubmit1" value="Sign In" />
+  
+</form>
