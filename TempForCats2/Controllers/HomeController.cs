@@ -15,10 +15,10 @@ namespace TempForCats2.Controllers
             return RedirectToAction("MainPost");
         }
 
-
         public ActionResult MainPost()
         {
-            var model = new HomeModel();
+            string query = Request.QueryString["Lol"];
+            var model = new ArticleModel();
             return View(model);
         }
 
@@ -36,12 +36,29 @@ namespace TempForCats2.Controllers
             return View();
         }
 
-
         public ActionResult Side()
         {
             var model = new RecentModel();
             return View(model);
         }
+
+        //public ActionResult AddComment()
+        //{
+        //    string comment = Request.Form["Comment"];
+        //    return RedirectToAction("MainPost");
+        //}
+
+       //public ActionResult AddComment(string Comment)
+       //{
+       //   string comment = Request.Form["Comment"];
+       //    return RedirectToAction("MainPost");
+       //}
+
+       public ActionResult AddComment(AddCommentModel model)
+       {
+           return RedirectToAction("MainPost");
+       }
+
 
 
     }

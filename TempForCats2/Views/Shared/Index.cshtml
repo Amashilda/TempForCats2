@@ -1,7 +1,4 @@
-﻿@{
-    Layout = null;
-}
-@model TempForCats2.Models.HomeModel
+﻿@model TempForCats2.Models.ArticleModel
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="~/Content/reset.css">
@@ -9,9 +6,10 @@
     <title>TempForCats2</title>
 </head>
 <body>
+
     <div id="left">
-        @Html.Partial("Side", new TempForCats2.Models.RecentModel())
-    </div>
+         @Html.Partial("Side", new TempForCats2.Models.RecentModel())
+    </div>ction
 
     <div id="right">
         @RenderBody()

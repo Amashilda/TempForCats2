@@ -1,0 +1,19 @@
+﻿@{
+    Layout = null;
+}
+
+@model TempForCats2.Models.AddCommentModel
+
+<form action="/home/addcomment" method="get">
+    <div class="forname">
+        <input name="name" type="text" value="Your name:">
+    </div>
+
+    <div class="yourcom">
+
+        @Html.TextAreaFor(m => m.Comment, new { placeholder = "Your comment: ", @class= "txt-Area"})
+        @*<textarea name="comment" value="Your comment:"> </textarea>*@
+        <button> Submit </button>
+        <button> Cansel </button>
+    </div>
+</form>

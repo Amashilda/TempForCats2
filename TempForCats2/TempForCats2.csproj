@@ -126,12 +126,15 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ArticleController.cs" />
+    <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LeftController.cs" />
     <Compile Include="Controllers\LoginsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AddCommentModel.cs" />
     <Compile Include="Models\Dao.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\RecentModel.cs" />
@@ -159,7 +162,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -186,13 +188,25 @@
     <Content Include="Views\Home\Side.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Left\Side.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Home\AboutCat.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Contacts.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\RecentPosts.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\RecentComments.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Comment\Recent.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Article\Recent.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\AddComment.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

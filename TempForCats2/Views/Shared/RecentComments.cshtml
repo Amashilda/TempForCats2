@@ -1,0 +1,18 @@
+﻿@{
+    Layout = null;
+}
+@model TempForCats2.Models.RecentDateModel
+<div>
+    <h2>Resent Comments: </h2>
+    <ul class="post-warp">
+
+        @foreach (var item in Model.Items)
+        {
+            <li>
+                <p class="date">@item.Date.ToString("D") @item.Date.ToString("hh:mm")</p>
+                <p class="comment"> <a href="@item.URL"> @item.text</a> </p>
+            </li>
+        }
+
+    </ul>
+</div>

@@ -8,7 +8,7 @@ using System.Data.SqlClient;namespace TempForCats2.Models
     {
         public LoginModel getCredentials()
         {
-            using (var connection = new SqlConnection("Data Source=iisus\\SQLEXPRESS; Initial Catalog=Kittens; Integrated Security=True"))
+            using (var connection = new SqlConnection("Data Source=IISUS\\SQLEXPRESS; Initial Catalog=Kittens; Integrated Security=True"))
             {
                 connection.Open();
                 using (var command = new SqlCommand(String.Format("SELECT * FROM Logins")))

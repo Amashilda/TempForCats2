@@ -1,19 +1,16 @@
 ﻿@model TempForCats2.Models.HomeModel
 
-
     <h3> All kind of posts </h3>
 
-    <ul class="post-warp">
-
-        @foreach (var item in Model.RecentPosts.Items)
+    @*<ul class="post-warp">
+        @foreach (var item in Model.RecentPost.Items)
         {
             <li>
                 <p class="date">@item.Date.ToString("D")</p>
                 <p class="post"> <a href="@item.URL"> @item.text </a> </p>
             </li>
         }
-
-    </ul>
+    </ul>*@
 
     <p align="center">
         @Html.ActionLink("Link to MainPost", "MainPost")

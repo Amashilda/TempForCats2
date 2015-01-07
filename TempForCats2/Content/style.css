@@ -160,18 +160,19 @@ font-size: 100%;
 width: 7%;
 }
 
-.yourcom input {
+.yourcom textarea {
 margin-left: 15%;
 width: 70%;
 height: 20%;
 margin-bottom: 4px;
 }
-.forname  input{
+.forname  input {
 height: 4%; 
 margin-left: 15%;
 width: 70%;
 margin-bottom: 3px;
 }
+
 
 .yourcom button {
    text-align: center;
