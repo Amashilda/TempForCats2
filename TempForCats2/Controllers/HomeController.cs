@@ -1,4 +1,5 @@
-﻿using System;
+﻿using TempForCats2.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -54,10 +55,29 @@ namespace TempForCats2.Controllers
        //    return RedirectToAction("MainPost");
        //}
 
+       //public ActionResult AddComment(AddCommentModel model)
+       //{
+       //    return RedirectToAction("MainPost");
+       //}
+
+        [HttpGet]
+        public ActionResult AddComment()
+        {
+            string query = Request.QueryString["Lol"];
+            var model = new ArticleModel();
+            return View(model);
+        }
+
+
+        [HttpPost]
        public ActionResult AddComment(AddCommentModel model)
        {
-           return RedirectToAction("MainPost");
+            if (!string.IsNullOrWhiteSpace(model.Comment)){
+                CommentsRepository.Comments.Add(model.Comment);
+            }
+            return View(new ArticleModel());
        }
+
 
 
 

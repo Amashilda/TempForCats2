@@ -19,16 +19,14 @@
 
     <div class="fullcomments">
         <h2>Comments: </h2>
-
         <ul>
-            @foreach (var item in Model.Comments) { 
+            @foreach (var item in Model.Comments) {
             <li>
                 <div class="avatar"> <img src="~/Content/cat2.jpg" alt="Avatar"> </div>
                 <div class="textcomment">
                     <p> @item.Username </p>
                     <p class="date"> @item.Date.ToString("D") @item.Date.ToString("hh:mm")</p>
                     <p> @item.Body </p>
-
                 </div>
             </li>
             } 

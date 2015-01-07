@@ -9,6 +9,5 @@ namespace TempForCats2.Models
     {
             public string Login { get; set; }
             public string Password { get; set; }
- 
     }
 }

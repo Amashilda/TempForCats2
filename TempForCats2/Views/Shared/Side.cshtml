@@ -1,0 +1,20 @@
+﻿@model TempForCats2.Models.RecentModel
+
+<img src="~/Content/cat.jpg" width="100%" alt="The Cat">
+<h2> Test Template Blog For Cat </h2>
+
+<div id="menu">
+    <ul >
+        <li> @Html.ActionLink("All Posts", "AllPosts")</li>
+        <li> @Html.ActionLink("About Cat", "AboutCat")</li>
+        <li> @Html.ActionLink("Contact Us", "Contacts")</li>
+    </ul>
+</div>
+
+<div class="search">
+    <input type="text" value="Search:">
+    <button> Go </button>
+</div>
+
+@Html.Partial("RecentPosts", new TempForCats2.Repository.GetRecentPosts())
+@Html.Partial("RecentComments", new TempForCats2.Models.RecentDateModel())

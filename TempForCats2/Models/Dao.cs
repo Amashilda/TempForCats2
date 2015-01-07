@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Data.SqlClient;namespace TempForCats2.Models
+using System.Data.SqlClient;
+using System.Configuration;
+namespace TempForCats2.Models
 {
     public class Dao
     {
         public LoginModel getCredentials()
         {
-            using (var connection = new SqlConnection("Data Source=IISUS\\SQLEXPRESS; Initial Catalog=Kittens; Integrated Security=True"))
+            using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["mssql"].ConnectionString))
             {
                 connection.Open();
                 using (var command = new SqlCommand(String.Format("SELECT * FROM Logins")))

@@ -1,12 +1,13 @@
 ﻿@{
     Layout = null;
 }
-@model TempForCats2.Models.RecentDateModel
+
+@model TempForCats2.Repository.GetRecentPosts
 <div>
     <h2>  Resent Posts: </h2>
     <ul class="post-warp">
 
-        @foreach (var item in Model.Items)
+        @foreach (var item in Model.GetCollection())
         {
             <li> 
                 <p class="date">@item.Date.ToString("D")</p>

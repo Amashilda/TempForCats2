@@ -9,16 +9,12 @@ namespace TempForCats2.Models
 {
     public class RecentDateModel
     {
+        public ICollection<RecentDateItemModel> Items { get; set; }
+
         public RecentDateModel()
         {
             Items = new Collection<RecentDateItemModel>();
             Items.Add(new RecentDateItemModel());
-            Items.Add(new RecentDateItemModel());
-            Items.Add(new RecentDateItemModel());
-
         }
-
-        public ICollection<RecentDateItemModel> Items { get; set; }
-
     }
 }
